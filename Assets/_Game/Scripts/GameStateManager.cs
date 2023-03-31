@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
+
     public class OnGameStateChangedEventArgs : EventArgs
     {
         public State _currentState;
@@ -18,6 +19,8 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private FinishLine finishLine;
     [SerializeField] private ControlPanel controlPanel;
     [SerializeField] private CallStateManager callStateManager;
+    [SerializeField] private LevelLoadingManager levelLoadingManager;
+
 
     private State currentState = State.Idle;
     private OnGameStateChangedEventArgs gameStateChangedEventArgs = new OnGameStateChangedEventArgs();
@@ -36,6 +39,7 @@ public class GameStateManager : MonoBehaviour
         if (e._currentCallState == CallStateManager.CallState.Ended)
         {
             SetGameState(State.Started);
+            levelLoadingManager.BE_LoadNextLevel();
         }
     }
 

@@ -99,6 +99,7 @@ public class CallStateManager : MonoBehaviour
 
     private void Ring()
     {
+        AudioManager.Instance.gameObject.SetActive(false);
         StartCoroutine(COR_Ring());
     }
 

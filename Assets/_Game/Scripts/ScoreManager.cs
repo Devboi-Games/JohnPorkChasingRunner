@@ -43,9 +43,11 @@ public class ScoreManager : MonoBehaviour
         {
             score -= amount;
             UpdateScoreText();
+            AudioManager.Instance.PlaySuccess();
             //Sounds
             return true;
         }
+        AudioManager.Instance.PlayFail();
         //Sounds
         return false;
     }

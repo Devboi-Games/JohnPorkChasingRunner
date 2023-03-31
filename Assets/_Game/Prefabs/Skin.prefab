@@ -176,4 +176,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockMethod: 1
-  price: 0
+  price: 10000

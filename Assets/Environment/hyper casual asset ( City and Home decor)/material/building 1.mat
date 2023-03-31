@@ -137,9 +137,9 @@ Material:
     - _fogHeight: 9.2
     - _fogMinAlpha: 0
     m_Colors:
-    - _BaseColor: {r: 0.033018887, g: 0.6764408, b: 1, a: 1}
+    - _BaseColor: {r: 0.07794184, g: 0.051560454, b: 0.103773594, a: 1}
     - _BorderColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.033018887, g: 0.6764408, b: 1, a: 1}
+    - _Color: {r: 0.07794183, g: 0.05156043, b: 0.10377359, a: 1}
     - _DistTiling: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MoveDirection: {r: 0, g: 0, b: 0, a: 0}

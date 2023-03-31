@@ -29,12 +29,12 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if(gotTheDestination)
+        if (gotTheDestination)
         {
             navMeshAgent.SetDestination(playerPos.position);
         }
 
-        if(moveUp)
+        if (moveUp)
         {
             this.transform.Translate(Vector3.up * 2.5f * Time.deltaTime);
         }
@@ -42,14 +42,15 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Bullet") && !dead)
+        if (other.gameObject.CompareTag("Bullet") && !dead)
         {
-           
+
             Destroy(other.gameObject);
             KillEnemy();
+            UpdateScoreText.Instance.IncreaseScoreText();
         }
 
-        if(other.gameObject.CompareTag("Ladder"))
+        if (other.gameObject.CompareTag("Ladder"))
         {
             gotTheDestination = false;
             navMeshAgent.enabled = false;
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
             Climb();
         }
 
-        if(other.gameObject.CompareTag("ClimbOff"))
+        if (other.gameObject.CompareTag("ClimbOff"))
         {
             navMeshAgent.enabled = true;
             gotTheDestination = true;
@@ -137,7 +138,7 @@ public class Enemy : MonoBehaviour
         {
             int randomX = Random.Range(0, 10);
             int xPos;
-            if(randomX < 5)
+            if (randomX < 5)
             {
                 xPos = -1;
             }

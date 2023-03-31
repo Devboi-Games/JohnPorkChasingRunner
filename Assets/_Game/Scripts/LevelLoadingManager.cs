@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoadingManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private LoadingPanel loadingPanel;
     [SerializeField] private GameObject[] levels;
     private int currentLevel;
@@ -17,24 +16,24 @@ public class LevelLoadingManager : MonoBehaviour
         loadingPanel.onHidden += LoadingPanel_onHidden;
         currentLevel = SaveAndLoadManager.LoadLevel();
         levels[currentLevel - 1].SetActive(true);
-        SetLevelText();
     }
 
     private void LoadingPanel_onHidden(object sender, EventArgs e)
     {
-        currentLevel++;
-        if (currentLevel - 1 >= levels.Length)
-        {
-            currentLevel = 1;
-        }
-        SaveAndLoadManager.SaveLevel(currentLevel);
-        BE_ReloadLevel();
+        ////currentLevel++;
+        //if (currentLevel - 1 >= levels.Length)
+        //{
+        //    currentLevel = 1;
+        //}
+        //SaveAndLoadManager.SaveLevel(currentLevel);
+        LoadNext();
     }
 
-    private void SetLevelText()
+    private void LoadNext()
     {
-        levelText.text = $"Level {currentLevel}";
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 
     public void BE_LoadNextLevel()
     {
