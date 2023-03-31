@@ -18,9 +18,11 @@ public class SkinShowcase : MonoBehaviour
     [SerializeField] private Vector3 farLeft;
     [SerializeField] private Vector3 farRight;
     [SerializeField] private Skin[] skins;
+    [SerializeField] private GameObject[] menuShow;
     private int currentSkinIndex;
     private Skin currentSkin;
 
+    public int CurrentSkinIndex { get => currentSkinIndex; }
 
     private void Start()
     {
@@ -29,10 +31,15 @@ public class SkinShowcase : MonoBehaviour
         UpdateButtons();
         UpdatePriceText();
         UpdateUnlockMethodText();
-        MoveToCenter(currentSkin.transform);
+        BE_ShowOnSelectedSkinMenu();
 
         selectButton.onClick.AddListener(BE_Select);
         buyButton.onClick.AddListener(BE_Buy);
+    }
+
+    public void BE_MoveCurrentSkinToCenter()
+    {
+        MoveToCenter(currentSkin.transform);
     }
 
     private void LoadSkins()
@@ -90,6 +97,13 @@ public class SkinShowcase : MonoBehaviour
         MoveToCenter(currentSkin.transform);
     }
 
+    public void BE_ShowOnSelectedSkinMenu()
+    {
+        for (int i = 0; i < menuShow.Length; i++)
+        {
+            menuShow[i].gameObject.SetActive(i == currentSkinIndex);
+        }
+    }
 
     public void BE_Left()
     {

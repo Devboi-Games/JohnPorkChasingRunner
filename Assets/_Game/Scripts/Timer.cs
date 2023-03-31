@@ -7,7 +7,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textComp;
-    [SerializeField] private AudioClip voiceClip;
+    [SerializeField] private AudioSource voiceSource;
     [SerializeField] private CallStateManager callStateManager;
     private DateTime currentTime;
     private float timer;
@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        timerMax = voiceClip.length;
+        timerMax = voiceSource.clip.length;
     }
 
     private void Start()
@@ -30,6 +30,7 @@ public class Timer : MonoBehaviour
         if (e._currentCallState == CallStateManager.CallState.Accepted)
         {
             timer = 0;
+            timerMax = voiceSource.clip.length;
             currentTime = new DateTime();
             textComp.text = $"{currentTime.Minute:00}:{currentTime.Second:00}";
             Debug.Log("Reset");

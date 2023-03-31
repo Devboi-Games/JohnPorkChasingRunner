@@ -12,9 +12,15 @@ public class CallStateManager : MonoBehaviour
     public enum CallState { Ringing, Accepted, Declined, Ended }
 
     [SerializeField] private ControlPanel controlPanel;
+    [SerializeField] private SkinShowcase skinShowcase;
     [SerializeField] private Timer timer;
     [SerializeField] private float recallIntervalMax = 1f;
 
+    [Header("CharacterVoices")]
+    [SerializeField] private AudioClip[] walterPinkClips;
+    [SerializeField] private AudioClip[] mrsPorkClips;
+    [SerializeField] private AudioClip[] mrPorkClips;
+    [Header("Normal SFx")]
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource voiceSource;
@@ -40,6 +46,7 @@ public class CallStateManager : MonoBehaviour
 
     public void BE_Accept()
     {
+        SetCharacterVoice(skinShowcase.CurrentSkinIndex);
         PlaySound(audioClips[1], false);
         SetState(CallState.Accepted);
         startCallPage.gameObject.SetActive(false);
@@ -58,10 +65,30 @@ public class CallStateManager : MonoBehaviour
     private IEnumerator COR_StartTalking()
     {
         yield return new WaitForSeconds(.1f);
+
+
         voiceSource.Play();
         timer.onIsFinished += Timer_onIsFinished;
 
 
+    }
+
+    private void SetCharacterVoice(int currentSkinIndex)
+    {
+        if (currentSkinIndex == 0)
+        {
+            voiceSource.clip = mrPorkClips[UnityEngine.Random.Range(0, mrPorkClips.Length)];
+        }
+        else if (currentSkinIndex == 1)
+        {
+            voiceSource.clip = walterPinkClips[UnityEngine.Random.Range(0, walterPinkClips.Length)];
+
+        }
+        else if (currentSkinIndex == 2)
+        {
+            voiceSource.clip = mrsPorkClips[UnityEngine.Random.Range(0, mrsPorkClips.Length)];
+
+        }
     }
 
     private IEnumerator COR_Ring()
@@ -87,7 +114,8 @@ public class CallStateManager : MonoBehaviour
         SetState(CallState.Declined);
         midCallPage.gameObject.SetActive(false);
 
-        StartCoroutine(COR_CallAgain());
+        //StartCoroutine(COR_CallAgain());
+        Timer_onIsFinished(this, EventArgs.Empty);
     }
 
     private IEnumerator COR_CallAgain()
