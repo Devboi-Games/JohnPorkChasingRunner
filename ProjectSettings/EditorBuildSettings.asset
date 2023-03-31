@@ -6,6 +6,48 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Game/Scenes/_GameScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/1. MainScene.unity
+    guid: fe5a973c458eafa47b0cbdc1012311ee
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/1.unity
+    guid: cb90497c9fb4b344c8188d25f0e5150d
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/2.unity
+    guid: e2085cc6d4a5e374bb2d8a5ed97a8dc8
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/3.unity
+    guid: 6138366a07d76384a8a29750fe00bd99
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/4.unity
+    guid: 8a800fbb15a53604998c3b42d8837163
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/5.unity
+    guid: 606a47b7f6c68724e821a683a3266953
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/6.unity
+    guid: c38c3d250fd120742a57652f9b4cd1c0
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/7.unity
+    guid: 5dd4b36a76b95864da0f52684b980cb0
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/8.unity
+    guid: 489eed211d0be3f4bbfa2c34115ad927
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/9.unity
+    guid: 147fa9460b06a854ba6f052bb728bc67
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/10.unity
+    guid: c04eb5813251995499a88269ea750c4a
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/11.unity
+    guid: 722b06f0bf2e08c44bcc7ebe514865d4
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/12.unity
+    guid: a571d21632b77c24ba507ef42d9027d7
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/13.unity
+    guid: 7a309e336fff8c24a9f7e99d84731d62
+  - enabled: 1
+    path: Assets/Scenes/Video Scenes/14.unity
+    guid: 1a583fcc670b0a0498b9f63ad13fe1b7
   m_configObjects: {}

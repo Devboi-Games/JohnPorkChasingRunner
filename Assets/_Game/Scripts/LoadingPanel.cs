@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class LoadingPanel : MonoBehaviour
 {
-    [SerializeField] private LevelLoadingManager levelLoadingManager;
     [SerializeField] private ProgressBar progressBar;
     [SerializeField] private float loadDuration;
 

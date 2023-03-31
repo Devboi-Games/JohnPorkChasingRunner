@@ -1,0 +1,26 @@
+{
+    "Version": 1,
+    "Error": "",
+    "Attribution": "adjust",
+    "AttributionToken": "s3kbldqpeups",
+    "Platform": "android",
+    "Configuration": [
+        {
+            "Name": "facebook_app_id",
+            "Data": "3247689455343734"
+        },
+        {
+            "Name": "facebook_app_name",
+            "Data": "Runner"
+        },
+        {
+            "Name": "admob_app_id",
+            "Data": "ca-app-pub-4802411449673199~8856473734"
+        },
+        {
+            "Name": "firebase",
+            "Data": "{\n  \"project_info\": {\n    \"project_number\": \"406845186333\",\n    \"firebase_url\": \"https://runner-4753d.firebaseio.com\",\n    \"project_id\": \"runner-4753d\",\n    \"storage_bucket\": \"runner-4753d.appspot.com\"\n  },\n  \"client\": [\n    {\n      \"client_info\": {\n        \"mobilesdk_app_id\": \"1:406845186333:android:22756e612956ac87b501f4\",\n        \"android_client_info\": {\n          \"package_name\": \"com.master.runner\"\n        }\n      },\n      \"oauth_client\": [\n        {\n          \"client_id\": \"406845186333-vm3fe6fdncbkea874t1852d7cjnn2fbe.apps.googleusercontent.com\",\n          \"client_type\": 3\n        }\n      ],\n      \"api_key\": [\n        {\n          \"current_key\": \"AIzaSyDroHLV5F7WTraKoXlmslGj-8DK6TOWQ3c\"\n        }\n      ],\n      \"services\": {\n        \"appinvite_service\": {\n          \"other_platform_oauth_client\": [\n            {\n              \"client_id\": \"406845186333-vm3fe6fdncbkea874t1852d7cjnn2fbe.apps.googleusercontent.com\",\n              \"client_type\": 3\n            },\n            {\n              \"client_id\": \"406845186333-36blbf9fuhjd7ae1654n0u4sfmu3e9s6.apps.googleusercontent.com\",\n              \"client_type\": 2,\n              \"ios_info\": {\n                \"bundle_id\": \"com.master.runner\"\n              }\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"configuration_version\": \"1\"\n}"
+        }
+    ],
+    "Alerts": []
+}

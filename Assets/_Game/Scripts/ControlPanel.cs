@@ -11,6 +11,7 @@ public class ControlPanel : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        Debug.Log("Dragged");
         onDragToStartGame?.Invoke();
     }
 

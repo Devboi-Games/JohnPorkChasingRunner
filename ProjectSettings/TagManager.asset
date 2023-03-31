@@ -3,7 +3,32 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Gun
+  - Bullet
+  - TurretWall
+  - Water
+  - Enemy
+  - Gun 2
+  - Road Trigger
+  - Obstacle
+  - obs
+  - Jump
+  - JumpOff
+  - Ladder
+  - ClimbOff
+  - +2
+  - Wall
+  - Big Jump
+  - Big Jump 2
+  - Air gun
+  - Slide
+  - Slide Off
+  - +3
+  - Roll jump
+  - Roll jump off
+  - Slide 2
+  - Slide 2 off
   layers:
   - Default
   - TransparentFX
@@ -13,8 +38,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Enemy
+  - EnemyBody
   - 
   - 
   - 

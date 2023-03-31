@@ -8,10 +8,17 @@ public class GameStateManager : MonoBehaviour
     public class OnGameStateChangedEventArgs : EventArgs
     {
         public State _currentState;
+        public EndGameState _currentEndGameState;
     }
-    public enum State { Idle, Started, Ended }
 
+    public enum State { Idle, Started, Ended }
+    public enum EndGameState { Lose, Win }
+
+    //[SerializeField] private Player player;
+    [SerializeField] private FinishLine finishLine;
     [SerializeField] private ControlPanel controlPanel;
+    [SerializeField] private CallStateManager callStateManager;
+
     private State currentState = State.Idle;
     private OnGameStateChangedEventArgs gameStateChangedEventArgs = new OnGameStateChangedEventArgs();
 
@@ -19,14 +26,30 @@ public class GameStateManager : MonoBehaviour
 
     private void Start()
     {
-        controlPanel.onDragToStartGame.AddListener(ControlPanel_onDragToStartGame);
+        callStateManager.onCallStateChanged += CallStateManager_onCallStateChanged;
+        //player.onIsDead += Player_onIsDead;
+        finishLine.onIsCrossed += FinishLine_onIsCrossed;
     }
 
-    private void ControlPanel_onDragToStartGame()
+    private void CallStateManager_onCallStateChanged(object sender, CallStateManager.OnCallStateChangedEventArgs e)
     {
-        SetGameState(State.Started);
-        controlPanel.onDragToStartGame.RemoveListener(ControlPanel_onDragToStartGame);
+        if (e._currentCallState == CallStateManager.CallState.Ended)
+        {
+            SetGameState(State.Started);
+        }
     }
+
+    private void FinishLine_onIsCrossed(object sender, EventArgs e)
+    {
+        SetEndGameState(EndGameState.Win);
+    }
+
+    private void Player_onIsDead(object sender, EventArgs e)
+    {
+        SetEndGameState(EndGameState.Lose);
+    }
+
+
 
     private void SetGameState(State state)
     {
@@ -34,5 +57,11 @@ public class GameStateManager : MonoBehaviour
         gameStateChangedEventArgs._currentState = currentState;
         onGameStateChanged?.Invoke(this, gameStateChangedEventArgs);
         Debug.Log("State: " + state);
+    }
+
+    private void SetEndGameState(EndGameState endState)
+    {
+        gameStateChangedEventArgs._currentEndGameState = endState;
+        SetGameState(State.Ended);
     }
 }

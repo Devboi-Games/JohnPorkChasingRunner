@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: bd0b3ad455bf40e4e9c40c0560567baf
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -4829240212206204333
+    second: EnemyIdle2
+  - first:
+      74: -2040368661136020211
+    second: EnemyAiming
+  - first:
+      74: 7498308972423356153
+    second: GoLeftExtended
+  - first:
+      74: -8046149790755456327
+    second: GoRightExtended
+  - first:
+      74: -3212289463768728824
+    second: EnemyAimingCirc0
+  - first:
+      74: 1421299376527779297
+    second: EnemyAimingCirc
+  - first:
+      74: -187221878656184124
+    second: Peek
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  - first:
+      74: 88577628089690623
+    second: Take 001_1
+  - first:
+      74: 1318838329553761473
+    second: PeekIdle
+  - first:
+      74: -3126087739534103216
+    second: KneeToStandShot
+  - first:
+      74: -5997355403776709349
+    second: AimingShot01
+  - first:
+      74: -2027052882559483390
+    second: GoLeftShot
+  - first:
+      74: -4949371256494990697
+    second: GoRightShot
+  - first:
+      74: -4494597631333444062
+    second: PeekAndAimShot
+  - first:
+      74: 4955388253415038751
+    second: Hands Shoot
+  - first:
+      74: -2042693782479606104
+    second: WallShoot
+  - first:
+      74: 5147928276633869896
+    second: Crouching
+  - first:
+      74: -5561221016586831109
+    second: DiveRoll
+  - first:
+      74: 3604880746047404108
+    second: DoorKick
+  - first:
+      74: 951046493046971249
+    second: CrouchingShoot
+  - first:
+      74: 7490887377711229557
+    second: Take 001_2
+  - first:
+      74: -5898107036448125507
+    second: DoorKickShoot
+  - first:
+      74: 1514544081069751447
+    second: EnemyFlipLeft
+  - first:
+      74: -5083307913228265973
+    second: EnemyFlipRight
+  - first:
+      74: 6258532812806792686
+    second: JumpOver
+  - first:
+      74: -1192840080986744117
+    second: Slide
+  - first:
+      74: 6712680462276597649
+    second: WallRunLeft
+  - first:
+      74: -2157642163887881083
+    second: SimpleJump
+  - first:
+      74: 6388442385777485760
+    second: RunningFast
+  - first:
+      74: 8498393067123038262
+    second: JumpLeft
+  - first:
+      74: 4814679709754501371
+    second: JumpRight
+  - first:
+      74: 7557525489119732692
+    second: EnemyJump
+  - first:
+      74: -5993545236216450277
+    second: RopeSlide
+  - first:
+      74: 5398022408598822194
+    second: ShieldStrafe
+  - first:
+      74: 2466928104510302967
+    second: ShieldStrafeForward
+  - first:
+      74: 2082663981445497251
+    second: ShieldWalk
+  - first:
+      74: -5632729845674330296
+    second: CarAimingBack01
+  - first:
+      74: 8126687762935086867
+    second: CarAimingBack02
+  - first:
+      74: 6763953403348395319
+    second: CarAimingBack03
+  - first:
+      74: -6903004617207261295
+    second: CarAimingLeft01
+  - first:
+      74: 2958460025855179076
+    second: CarAimingLeft02
+  - first:
+      74: -5933568720001145660
+    second: CarAimingLeft03
+  - first:
+      74: 7769595165896269681
+    second: ShieldJumpOver
+  - first:
+      74: 3578985942134406947
+    second: RunningAimingRight
+  - first:
+      74: -6091854210595215823
+    second: RuningAimingForward
+  - first:
+      74: 1685695973520858001
+    second: RunningAimingLeft
+  - first:
+      74: -5482483912388526252
+    second: JetpackFly
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

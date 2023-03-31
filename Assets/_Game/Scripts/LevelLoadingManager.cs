@@ -23,6 +23,10 @@ public class LevelLoadingManager : MonoBehaviour
     private void LoadingPanel_onHidden(object sender, EventArgs e)
     {
         currentLevel++;
+        if (currentLevel - 1 >= levels.Length)
+        {
+            currentLevel = 1;
+        }
         SaveAndLoadManager.SaveLevel(currentLevel);
         BE_ReloadLevel();
     }
@@ -32,7 +36,7 @@ public class LevelLoadingManager : MonoBehaviour
         levelText.text = $"Level {currentLevel}";
     }
 
-    public void LoadNextLevel()
+    public void BE_LoadNextLevel()
     {
         loadingPanel.Show();
     }
@@ -46,11 +50,11 @@ public class LevelLoadingManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            LoadNextLevel();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.N))
+    //    {
+    //        BE_LoadNextLevel();
+    //    }
+    //}
 }
