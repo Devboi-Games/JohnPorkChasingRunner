@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScoreText: {fileID: 5689289575321102563}
-  killValue: 50
+  killValue: 10
 --- !u!1 &2210151917916684912
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class CallStateManager : MonoBehaviour
 
     [SerializeField] private ControlPanel controlPanel;
     [SerializeField] private SkinShowcase skinShowcase;
+    [SerializeField] private GameObject declineCallBG;
     [SerializeField] private Timer timer;
     [SerializeField] private float recallIntervalMax = 1f;
 
@@ -24,11 +25,12 @@ public class CallStateManager : MonoBehaviour
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource voiceSource;
-    [SerializeField] private GameObject startCallPage;
-    [SerializeField] private GameObject midCallPage;
+    [SerializeField] private GameObject[] startCallPages;
+    [SerializeField] private GameObject[] midCallPages;
 
     private CallState currentCallState;
     private OnCallStateChangedEventArgs callStateChangedEventArgs = new OnCallStateChangedEventArgs();
+    private bool wasAccepted;
 
     public event EventHandler<OnCallStateChangedEventArgs> onCallStateChanged;
 
@@ -46,20 +48,24 @@ public class CallStateManager : MonoBehaviour
 
     public void BE_Accept()
     {
+        timer.gameObject.SetActive(true);
+        wasAccepted = true;
         SetCharacterVoice(skinShowcase.CurrentSkinIndex);
         PlaySound(audioClips[1], false);
         SetState(CallState.Accepted);
-        startCallPage.gameObject.SetActive(false);
-        midCallPage.gameObject.SetActive(true);
+
+        startCallPages[skinShowcase.CurrentSkinIndex].gameObject.SetActive(false);
+        midCallPages[skinShowcase.CurrentSkinIndex].gameObject.SetActive(true);
+
         StartCoroutine(COR_StartTalking());
     }
 
     public void BE_Ended()
     {
-
+        timer.gameObject.SetActive(false);
         PlaySound(audioClips[2], false);
         SetState(CallState.Ended);
-        midCallPage.gameObject.SetActive(false);
+        midCallPages[skinShowcase.CurrentSkinIndex].gameObject.SetActive(false);
     }
 
     private IEnumerator COR_StartTalking()
@@ -96,7 +102,7 @@ public class CallStateManager : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         SetState(CallState.Ringing);
         PlaySound(audioClips[0], true);
-        startCallPage.gameObject.SetActive(true);
+        startCallPages[skinShowcase.CurrentSkinIndex].gameObject.SetActive(true);
 
     }
 
@@ -112,15 +118,21 @@ public class CallStateManager : MonoBehaviour
         PlaySound(audioClips[2], false);
         voiceSource.Stop();
         SetState(CallState.Declined);
-        midCallPage.gameObject.SetActive(false);
+        midCallPages[skinShowcase.CurrentSkinIndex].gameObject.SetActive(false);
 
-        //StartCoroutine(COR_CallAgain());
-        Timer_onIsFinished(this, EventArgs.Empty);
+        if (!wasAccepted)
+        {
+            StartCoroutine(COR_CallAgain());
+        }
+        else
+        {
+            Timer_onIsFinished(this, EventArgs.Empty);
+        }
     }
 
     private IEnumerator COR_CallAgain()
     {
-        startCallPage.gameObject.SetActive(false);
+        startCallPages[skinShowcase.CurrentSkinIndex].gameObject.SetActive(false);
         yield return new WaitForSeconds(recallIntervalMax);
         Ring();
     }
@@ -128,6 +140,7 @@ public class CallStateManager : MonoBehaviour
     private void Ring()
     {
         AudioManager.Instance.gameObject.SetActive(false);
+        declineCallBG.SetActive(true);
         StartCoroutine(COR_Ring());
     }
 

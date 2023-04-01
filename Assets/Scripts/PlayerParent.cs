@@ -9,7 +9,7 @@ public class PlayerParent : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             InstantiatePlayers(2);
         }
@@ -32,11 +32,11 @@ public class PlayerParent : MonoBehaviour
         {
             xValue = -0.5f;
         }
-        else if(number == 3)
+        else if (number == 3)
         {
             xValue = -1f;
-        }   
-        
+        }
+
         for (int i = 0; i < number; i++)
         {
             Vector3 newPlayerPos = new Vector3(xValue + xPos, playerYPos, playerZPos);
@@ -47,6 +47,7 @@ public class PlayerParent : MonoBehaviour
                 xValue += 1;
             }
             Player playerScript = player.GetComponent<Player>();
+            player.GetComponent<ChangePlayerSkin>().Init();
             playerScript.Run();
             playerScript.gameStarted = true;
         }

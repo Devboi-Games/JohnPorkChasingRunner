@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Unconditional Games
-  productName: Gun Shooter
+  companyName: InfluencerGames
+  productName: Pork Chase
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -153,12 +153,12 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.unconditionalgames.gunshooter
+    Android: com.InfluencerGames.PorkChase
   buildNumber:
     Standalone: 0
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 1
+  overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
@@ -236,7 +236,7 @@ PlayerSettings:
   clonedFromGUID: 9870af204204ab84596f8a656f2f2ce6
   templatePackageId: com.unity.template.universal@7.6.0
   templateDefaultScene: Assets/Scenes/SampleScene.unity
-  useCustomMainManifest: 1
+  useCustomMainManifest: 0
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
   useCustomLauncherGradleManifest: 0
@@ -247,8 +247,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/admin/Desktop/Keystore/unconditionalgames.keystore
-  AndroidKeyaliasName: unconditionalgames
+  AndroidKeystoreName: '{dedicated}: PorkChaseKeystore.keystore'
+  AndroidKeyaliasName: porkchase- porkchase@influencergames
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -271,7 +271,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: a2991658c3ff1d24f9f79b212d7fcf02, type: 3}
+      m_Icon: {fileID: 2800000, guid: 2d6d5b138af4e14438960882c8d014a1, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

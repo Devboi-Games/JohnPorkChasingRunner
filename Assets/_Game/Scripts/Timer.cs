@@ -15,14 +15,11 @@ public class Timer : MonoBehaviour
 
     public event EventHandler onIsFinished;
 
-    private void Awake()
-    {
-        timerMax = voiceSource.clip.length;
-    }
 
     private void Start()
     {
         callStateManager.onCallStateChanged += CallStateManager_onCallStateChanged;
+        gameObject.SetActive(false);
     }
 
     private void CallStateManager_onCallStateChanged(object sender, CallStateManager.OnCallStateChangedEventArgs e)

@@ -16,7 +16,7 @@ public class PlayerData
 
     //--------------------------------
 
-    public float score = 100000000000;
+    public float score = 0;
     public int currentLevel = 1;
     public int selectedSkin;
     public HashSet<int> unlockedSkins = new HashSet<int>() { 0 };
