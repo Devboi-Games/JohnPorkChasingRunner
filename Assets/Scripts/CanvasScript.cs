@@ -39,10 +39,10 @@ public class CanvasScript : MonoBehaviour
         levelNo++;
         PlayerPrefs.SetInt("Level no.", levelNo);
         //pluginScript.Instance.LevelCompleted(levelNo.ToString());
-        int rand = levelNo;
+        int rand = levelNo + 1;
         if (levelNo >= SceneManager.sceneCountInBuildSettings)
         {
-            rand = Random.Range(1, SceneManager.sceneCountInBuildSettings);
+            rand = Random.Range(2, SceneManager.sceneCountInBuildSettings);
         }
         SceneManager.LoadScene(rand);
         //if (ISManager.instance)
